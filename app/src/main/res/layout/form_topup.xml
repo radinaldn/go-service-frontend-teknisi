@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/custom_dialog_layout_design_user_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/ivFoto"
+            />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_id_telegram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nominal. Contoh : 100000"
+                android:drawablePadding="5dp"
+                android:inputType="number"
+                android:textColor="@color/textColorPrimary"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+</ScrollView>

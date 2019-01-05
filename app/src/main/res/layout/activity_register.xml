@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_back"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.8"
+            android:background="@drawable/gradient_bg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:id="@+id/relativeLayout">
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo"
+                android:id="@+id/imageView" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_below="@+id/imageView"
+                android:id="@+id/tilnik"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/colorWhite"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etnik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="NIK"
+                    android:maxLength="16"
+                    android:inputType="number"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilnik"
+                android:layout_marginTop="30dp"
+                app:passwordToggleContentDescription="show"
+                app:passwordToggleDrawable="@drawable/toggle_pass"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorWhite"
+                android:textColorHint="@color/colorWhite">
+
+                <android.support.design.widget.TextInputEditText
+                    android:fontFamily="sans-serif-light"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorLink="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp"
+                    android:id="@+id/etpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:singleLine="true"
+                    android:drawableTint="@color/colorWhite"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorWhite"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/tilpassword2"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilpassword"
+                android:layout_marginTop="30dp"
+                app:passwordToggleContentDescription="show"
+                app:passwordToggleDrawable="@drawable/toggle_pass"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorWhite"
+                android:textColorHint="@color/colorWhite">
+
+                <android.support.design.widget.TextInputEditText
+                    android:fontFamily="sans-serif-light"
+                    android:backgroundTint="@color/colorWhite"
+                    android:textColorLink="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp"
+                    android:id="@+id/etpassword2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:singleLine="true"
+                    android:drawableTint="@color/colorWhite"
+                    android:hint="Re-type Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorWhite"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="@color/colorWhite"
+                android:id="@+id/tilnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilpassword2"
+                android:layout_marginTop="30dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etnama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Nama Lengkap"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="@color/colorWhite"
+                android:id="@+id/tiltempatlahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilnama"
+                android:layout_marginTop="30dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ettempatlahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Tempat Lahir"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tiltgllahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tiltempatlahir"
+                android:layout_marginTop="30dp"
+                android:textColorHint="@color/colorWhite">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ettgllahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Tanggal Lahir"
+                    android:inputType="date"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="30dp"
+                android:id="@+id/tvjeniskelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/tiltgllahir"/>
+            <RadioGroup
+                android:id="@+id/rgjk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvjeniskelamin"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rblaki"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Laki-Laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbperempuan"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Perempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="@color/colorWhite"
+                android:id="@+id/tilalamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgjk"
+                android:layout_marginTop="30dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etalamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Alamat"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="30dp"
+                android:id="@+id/tvagama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agama"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/tilalamat"/>
+
+            <RadioGroup
+                android:id="@+id/rgagama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvagama"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbislam"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Islam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbkristen"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Kristen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                />
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbkhatolik"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Khatolik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbbudha"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Budha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   />
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbhindu"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Hindu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  />
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/tblainnya"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Lainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="30dp"
+                android:id="@+id/tvstatuskawin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Kawin"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/rgagama"/>
+            <RadioGroup
+                android:id="@+id/rgstatuskawin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvstatuskawin"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbsudah"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Sudah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbbelum"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="Belum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="@color/colorWhite"
+                android:id="@+id/tilpekerjaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgstatuskawin"
+                android:layout_marginTop="30dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etpekerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Pekerjaan"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="30dp"
+                android:id="@+id/tvkwn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kewarganegaraan"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@id/tilpekerjaan"/>
+            <RadioGroup
+                android:id="@+id/rgkwn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvkwn"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbwni"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="WNI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+                <RadioButton
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/rbwna"
+                    android:textColor="@color/colorWhite"
+                    android:layout_weight="0.3"
+                    android:text="WNA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:textColorHint="@color/colorWhite"
+                android:id="@+id/tilhp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgkwn"
+                android:layout_marginTop="30dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ethp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="No HP"
+                    android:inputType="number"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_below="@id/tilhp"
+                android:id="@+id/btRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_red"
+                android:text="Sign Up"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+        </ScrollView>
+
+
+
+
+
+
+        <!--<Button-->
+            <!--android:id="@+id/btSignUp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:background="@drawable/button_red"-->
+            <!--android:text="Sign Up"-->
+            <!--android:textColor="@color/colorWhite" />-->
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
