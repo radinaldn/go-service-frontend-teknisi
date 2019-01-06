@@ -39,8 +39,12 @@ public class SessionManager {
     public static final String FOTO = "foto";
     public static final String STATUS_AKUN = "status_akun";
     public static final String SALDO = "saldo";
+    public static final String TOTAL_RATING = "total_rating";
+    public static final String JUMLAH_PEMESANAN = "jumlah_pemesanan";
     public static final String CREATED_AT = "created_at";
     public static final String UPDATED_AT = "updated_at";
+
+
     public static final String TOTAL_DIPROSES = "total_diproses";
     public static final String TOTAL_SELSESAI = "total_selesai";
     public static final String TOTAL_DIBAYAR = "total_dibayar";
@@ -86,6 +90,8 @@ public class SessionManager {
         editor.putString(TOTAL_SELSESAI, dashboard.getSelesai());
         editor.putString(TOTAL_DIBAYAR, dashboard.getDibayar());
         editor.putString(SALDO, dashboard.getSaldo());
+        editor.putString(TOTAL_RATING, dashboard.getTotal_rating());
+        editor.putString(JUMLAH_PEMESANAN, dashboard.getJumlah_pemesanan());
         editor.commit();
 
     }
@@ -127,6 +133,8 @@ public class SessionManager {
         dashboard.put(TOTAL_SELSESAI, sharedPreferences.getString(TOTAL_SELSESAI, null));
         dashboard.put(TOTAL_DIBAYAR, sharedPreferences.getString(TOTAL_DIBAYAR, null));
         dashboard.put(SALDO, sharedPreferences.getString(SALDO, null));
+        dashboard.put(TOTAL_RATING, sharedPreferences.getString(TOTAL_RATING, null));
+        dashboard.put(JUMLAH_PEMESANAN, sharedPreferences.getString(JUMLAH_PEMESANAN, null));
 
         return dashboard;
     }

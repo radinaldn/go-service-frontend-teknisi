@@ -57,6 +57,12 @@ public class Teknisi {
     @SerializedName("saldo")
     @Expose
     private String saldo;
+    @SerializedName("total_rating")
+    @Expose
+    private int total_rating;
+    @SerializedName("jumlah_pemesanan")
+    @Expose
+    private int jumlah_pemesanan;
     @SerializedName("created_at")
     @Expose
     private String createdAt;
@@ -182,6 +188,22 @@ public class Teknisi {
 
     public void setSaldo(String saldo) {
         this.saldo = saldo;
+    }
+
+    public int getTotal_rating() {
+        return total_rating;
+    }
+
+    public void setTotal_rating(int total_rating) {
+        this.total_rating = total_rating;
+    }
+
+    public int getJumlah_pemesanan() {
+        return jumlah_pemesanan;
+    }
+
+    public void setJumlah_pemesanan(int jumlah_pemesanan) {
+        this.jumlah_pemesanan = jumlah_pemesanan;
     }
 
     public String getCreatedAt() {

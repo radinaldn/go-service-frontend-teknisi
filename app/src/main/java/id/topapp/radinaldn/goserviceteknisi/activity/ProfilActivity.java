@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -33,6 +34,7 @@ public class ProfilActivity extends AppCompatActivity {
     CircleImageView ivFoto;
     SessionManager sessionManager;
     ApiInterface apiService;
+    ImageView star1, star2, star3, star4, star5;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -85,6 +87,11 @@ public class ProfilActivity extends AppCompatActivity {
         ivFoto = findViewById(R.id.ivFoto);
         tvLayanan = findViewById(R.id.tvLayanan);
         tvNoHp = findViewById(R.id.tvNoHp);
+        star1 = findViewById(R.id.star1);
+        star2 = findViewById(R.id.star2);
+        star3 = findViewById(R.id.star3);
+        star4 = findViewById(R.id.star4);
+        star5 = findViewById(R.id.star5);
         
 
         tvNik.setText(sessionManager.getTeknisiDetail().get(SessionManager.NIK_PEMILIK));
@@ -108,6 +115,47 @@ public class ProfilActivity extends AppCompatActivity {
                 .centerCrop()
                 .fit()
                 .into(ivFoto);
+
+
+        Double dblRating = Math.round(Double.parseDouble(sessionManager.getDashboardDetail().get(SessionManager.TOTAL_RATING)))/(Double.parseDouble(sessionManager.getDashboardDetail().get(SessionManager.JUMLAH_PEMESANAN)));
+        int rating = dblRating.intValue();
+
+        System.out.println("rating : "+rating);
+
+        switch (rating){
+            case 1:
+                star1.setVisibility(View.VISIBLE);
+                break;
+            case 2:
+                star1.setVisibility(View.VISIBLE);
+                star2.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                star1.setVisibility(View.VISIBLE);
+                star2.setVisibility(View.VISIBLE);
+                star3.setVisibility(View.VISIBLE);
+                break;
+            case 4:
+                star1.setVisibility(View.VISIBLE);
+                star2.setVisibility(View.VISIBLE);
+                star3.setVisibility(View.VISIBLE);
+                star4.setVisibility(View.VISIBLE);
+                break;
+            case 5 :
+                star1.setVisibility(View.VISIBLE);
+                star2.setVisibility(View.VISIBLE);
+                star3.setVisibility(View.VISIBLE);
+                star4.setVisibility(View.VISIBLE);
+                star5.setVisibility(View.VISIBLE);
+                break;
+            default:
+                star1.setVisibility(View.GONE);
+                star2.setVisibility(View.GONE);
+                star3.setVisibility(View.GONE);
+                star4.setVisibility(View.GONE);
+                star5.setVisibility(View.GONE);
+                break;
+        }
     }
 
     private void getSaldoRealtime() {

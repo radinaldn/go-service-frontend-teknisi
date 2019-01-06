@@ -21,6 +21,12 @@ public class Dashboard {
     @SerializedName("saldo")
     @Expose
     private String saldo;
+    @SerializedName("total_rating")
+    @Expose
+    private String total_rating;
+    @SerializedName("jumlah_pemesanan")
+    @Expose
+    private String jumlah_pemesanan;
 
     public String getDiproses() {
         return diproses;
@@ -54,4 +60,19 @@ public class Dashboard {
         this.saldo = saldo;
     }
 
+    public String getTotal_rating() {
+        return total_rating;
+    }
+
+    public void setTotal_rating(String total_rating) {
+        this.total_rating = total_rating;
+    }
+
+    public String getJumlah_pemesanan() {
+        return jumlah_pemesanan;
+    }
+
+    public void setJumlah_pemesanan(String jumlah_pemesanan) {
+        this.jumlah_pemesanan = jumlah_pemesanan;
+    }
 }

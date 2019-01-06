@@ -61,6 +61,14 @@ public class Pemesanan {
     @SerializedName("ket")
     @Expose
     private String ket;
+
+    @SerializedName("rating")
+    @Expose
+    private int rating;
+    @SerializedName("komentar_rating")
+    @Expose
+    private String komentar_rating;
+
     @SerializedName("password")
     @Expose
     private String password;
@@ -97,6 +105,12 @@ public class Pemesanan {
     @SerializedName("saldo")
     @Expose
     private String saldo;
+    @SerializedName("total_rating")
+    @Expose
+    private int total_rating;
+    @SerializedName("jumlah_pemesanan")
+    @Expose
+    private int jumlah_pemesanan;
 
     public String getIdPemesanan() {
         return idPemesanan;
@@ -322,4 +336,35 @@ public class Pemesanan {
         this.saldo = saldo;
     }
 
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getKomentar_rating() {
+        return komentar_rating;
+    }
+
+    public void setKomentar_rating(String komentar_rating) {
+        this.komentar_rating = komentar_rating;
+    }
+
+    public int getTotal_rating() {
+        return total_rating;
+    }
+
+    public void setTotal_rating(int total_rating) {
+        this.total_rating = total_rating;
+    }
+
+    public int getJumlah_pemesanan() {
+        return jumlah_pemesanan;
+    }
+
+    public void setJumlah_pemesanan(int jumlah_pemesanan) {
+        this.jumlah_pemesanan = jumlah_pemesanan;
+    }
 }
