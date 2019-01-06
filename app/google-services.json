@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "449939109526",
+    "firebase_url": "https://go-service-bdc03.firebaseio.com",
+    "project_id": "go-service-bdc03",
+    "storage_bucket": "go-service-bdc03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449939109526:android:b6c10cf6f864b940",
+        "android_client_info": {
+          "package_name": "id.topapp.radinaldn.goserviceteknisi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449939109526-c43bi4hprt9pgfjiu6rgoofn2s3basd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXU4mP8UtTGTT088CaYMaVPaFTZKnoIXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
