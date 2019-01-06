@@ -24,6 +24,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import com.google.firebase.messaging.RemoteMessage;
+import com.pusher.pushnotifications.PushNotificationReceivedListener;
+import com.pusher.pushnotifications.PushNotifications;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -75,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // init for push notification w/ pusher
+        PushNotifications.start(getApplicationContext(), "825913f1-e596-46cd-a0b8-22d2b6535c3d");
+        PushNotifications.subscribe(sessionManager.getTeknisiDetail().get(SessionManager.ID_TEKNISI));
         
         cd = new ConnectionDetector(this);
         sessionManager = new SessionManager(this);
@@ -159,6 +167,12 @@ public class MainActivity extends AppCompatActivity {
             loadDataFromSession();
         }
         super.onResume();
+        PushNotifications.setOnMessageReceivedListenerForVisibleActivity(this, new PushNotificationReceivedListener() {
+            @Override
+            public void onMessageReceived(RemoteMessage remoteMessage) {
+                Log.i("MainActivity", "A remote message was received while this activity is visible!");
+            }
+        });
 
     }
 }
