@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/colorWhite">
+
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/etemail"
 
@@ -36,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorWhite"
                     android:fontFamily="sans-serif-light"
-                    android:hint="Email"
+                    android:hint="Email Teknisi"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorWhite"

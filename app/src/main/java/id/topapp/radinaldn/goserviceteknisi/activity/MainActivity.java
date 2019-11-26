@@ -80,12 +80,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sessionManager = new SessionManager(this);
+
         // init for push notification w/ pusher
         PushNotifications.start(getApplicationContext(), "825913f1-e596-46cd-a0b8-22d2b6535c3d");
         PushNotifications.subscribe(sessionManager.getTeknisiDetail().get(SessionManager.ID_TEKNISI));
         
         cd = new ConnectionDetector(this);
-        sessionManager = new SessionManager(this);
         apiService = ApiClient.getClient().create(ApiInterface.class);
 
         mTextMessage = (TextView) findViewById(R.id.message);
